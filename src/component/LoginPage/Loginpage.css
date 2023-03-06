@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    background-color: rgb(245, 73, 73);
+    /* text-align: center; */
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;  
+
+}
+
+.loginpage{
+    display: flex;
+    /* background-color: red; */
+    text-align: left;
+    justify-content: center;
+    /* min-height: 100vh; */
+    flex-direction: column;  
+    padding: 3rem; 
+     border: 1px solid white;
+     border-radius: 10px;
+   
+    
+}
+h2{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+label{
+    text-align: left;
+    padding: 0.25rem 0;
+}
+input{
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+
+}
+.submit-btn{
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: blue;
+    color: pink;
+    
+}
+.submit-btn:hover{
+    color: black;
+    background-color: rgb(157, 247, 157);
+    opacity: 1;
+}
+.link-btn{
+    color: black;
+    text-decoration: underline;
+    border: none;
+    margin: 30px;
+    cursor: pointer;
+    background: none;
+    color: red;
+}

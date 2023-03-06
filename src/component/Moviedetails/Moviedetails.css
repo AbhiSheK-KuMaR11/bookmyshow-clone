@@ -1,0 +1,48 @@
+.disdetails{
+    display: flex;
+    background-color: rgb(123, 214, 214);
+    min-height: 100vh;
+
+}
+.np-img{
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 10px;
+    height: 230px;
+    width: 230px;
+    
+}
+/* .popups{
+    background-color: red;
+} */
+.fa-rupee-sign{
+    font-size: 20px;
+    height: 20px;
+    width: 30px;
+}
+#wishlist-btn{
+    margin: 10px;
+
+}
+#ticket-btn{
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bolder;
+}
+#ticket-btn:hover{
+    color: black;
+    background-color: #234442;
+    transform: scale(1.1);
+}
+#back-btn{
+    cursor: pointer; 
+    padding: 5px;
+    margin: 10px;
+    font-weight: bolder;
+}
+#back-btn:hover{
+    color: black;
+    background-color: #234442;
+    transform: scale(1.1);
+
+}
