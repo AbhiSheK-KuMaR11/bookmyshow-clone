@@ -3,35 +3,10 @@ import "./Bookticket.css";
 import { useNavigate } from 'react-router-dom';
 
 
-// const totalseat = new Array(80)
-// for(let i =1; i <= totalseat.length; i++){
-//     let data = {
-//         seatno: i,
-//         occupied: false,
-//         selected:false
-//     }
-//     totalseat[i] = data;
-// }
-
 function Bookticket() {
 
     const navigate = useNavigate()
 
-    // const [seatdata, setSeatdata] = useState(totalseat);
-    // console.log(seatdata);
-
-    // const handleseat = (e) =>{
-    //     let seatno = e.target.value
-    //     let newseatdata = seatdata.map((nsd) => {
-    //         if(nsd.seatno === seatno){
-    //             nsd.selected =true
-    //         }
-    //         return nsd;
-
-    //     })
-    //     setSeatdata(prev => handleseat)
-
-    // }
     const home = () => {
         navigate("/Home")
     }
@@ -40,7 +15,7 @@ function Bookticket() {
     <>
    
     <div className='container-tkt'>
-    <button className='backarrow' onClick={home}><i className="fa fa-arrow-left" aria-hidden="true"></i></button>
+    <button className='backarrow' onClick={home}><i className="fa fa-arrow-left"></i></button>
         <h2>Book Tickets</h2>
         <div>
             <ul className='showcase'>
@@ -65,11 +40,7 @@ function Bookticket() {
             <div className='container-seat'>
                 <div className='screen'></div>
                 <div className='row'>
-                    {/* {seatdata.map((sd) => { 
-                         return (
-                         <div className={sd.selected ? "occupied" : "seat"} value={sd.seatno} onClick={(e) =>handleseat(e)}>{sd.seatno}</div> 
-                        )
-                     })}  */}
+                    
                     
                     <div className='seat'>01</div> 
                     <div className='seat'>02</div>
