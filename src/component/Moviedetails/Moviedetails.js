@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import "./Moviedetails.css";
 
 function Moviedetails() {
@@ -41,7 +41,7 @@ function Moviedetails() {
                 
                 {/* <button id='wishlist-btn'>Wishlist</button> */}
                 <button id='back-btn' onClick={home}><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                <button id='ticket-btn' onClick={bookticket}>Book Tickest</button>
+                <button id='ticket-btn' onClick={bookticket}>Book Tickets</button>
              </div>
              
         </div>

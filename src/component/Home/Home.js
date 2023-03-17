@@ -55,7 +55,7 @@ const Home = () => {
 
     </div>
     <div className='headnowplaying'>
-    <h2>Now Playing</h2>
+    <h2 className='nowplay'>Now Playing</h2>
     <div className='nowpage'>  
     
       {data?.map((np)=>{
@@ -63,8 +63,8 @@ const Home = () => {
             <div className='nowplaying' onClick={()=>movirdetails(np.id)}>
                 {/* <h3>{np.poster_path}</h3> */}
                 <img src= {` https://image.tmdb.org/t/p/original${np?.poster_path} `}alt ={"img"}  className = "np-img1"/>
-                <h3 className='title'>{np.title}</h3>
-                <h3 className='average'>{np.vote_average}</h3>
+                {/* <h3 className='title'>{np.title}</h3> */}
+                {/* <h3 className='average'>{np.vote_average}</h3> */}
             </div>
         )
     })}

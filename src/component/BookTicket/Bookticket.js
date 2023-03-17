@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Bookticket.css";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 // const totalseat = new Array(80)
@@ -158,9 +158,9 @@ function Bookticket() {
                     <div className='seat'>64</div>
                 </div> 
             </div>
-            <p className='finishtext'>
+             <p className='finishtext'>
                 you have selected<span id='countnum'>0</span> seats for a price of Rs.<span id='totalamount'>0</span>
-            </p>
+            </p> 
       
     </div>
     </>
