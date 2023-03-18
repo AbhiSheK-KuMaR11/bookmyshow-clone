@@ -15,10 +15,11 @@
 }
  .popups{
     color: black;
+    margin-top: 20px;
    
 } 
 .fa-rupee-sign{
-    font-size: 20px;
+    font-size: 20px !important;
     height: 20px;
     width: 30px;
 }
@@ -31,6 +32,9 @@
     padding: 7px;
     font-weight: bolder;
     margin: 10px;
+    background-color: lightblue;
+    border-radius: 10px;
+    
 }
 #ticket-btn:hover{
     color: black;
@@ -43,6 +47,8 @@
     padding: 7px;
     margin: 10px;
     font-weight: bolder;
+    background-color: rgb(85, 231, 241);
+    border-radius: 5px;
 }
 #back-btn:hover{
     color: black;

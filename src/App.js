@@ -7,6 +7,7 @@ import Moviedetails from './component/Moviedetails/Moviedetails';
 import Loginpage from './component/LoginPage/Loginpage';
 import Register from './component/Register/Register';
 import Bookticket from './component/BookTicket/Bookticket';
+import Confirm from './component/Confirmpage/Confirm';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path='/Home' element={<Home /> }></Route>
           <Route path='movie/:id' element={<Moviedetails />}></Route>
           <Route path='/register' element={<Register />}></Route>
-          <Route path='/bookticket' element={ < Bookticket />}></Route>
+          <Route path='/bookticket/:price' element={ < Bookticket />}></Route>
+          <Route path='/Confirmpage' element = {<Confirm />}></Route>
           
         </Routes>
       </Router>

@@ -1,16 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Bookticket.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
+let totalSeat = new Array(8);
+for(let i = 0; i < totalSeat.length; i++){
+    let newarr = [];
+    for(let j = 0; j < 10; j++){
+      newarr[j] = false
+    }
+    totalSeat[i] = newarr;
+}
+console.log(totalSeat);
 
 function Bookticket() {
 
     const navigate = useNavigate()
-
+    const {price} = useParams();
+    console.log('price is',price)
+    const [ticketCount,setTicketCount] = useState(0);
+    const [seat,setSeat] = useState(totalSeat);
+     console.log("seat is ",seat)
     const home = () => {
         navigate("/Home")
     }
-    
+    const conf = ()=>{
+        navigate("/Confirmpage")
+    }
+    const handleSeat = (outer,inner)=>{
+        // console.log("index is ",index);
+        // const newSeat = [...seat];
+        // newSeat[outer][inner] = true;
+        // setSeat(prev => newSeat);
+        let currseat = seat[outer][inner];
+        if(currseat == false){
+            const newSeat = [...seat];
+            newSeat[outer][inner] = true;
+            setSeat(prev => newSeat);
+            setTicketCount(prev => prev + 1)
+        }
+        
+    }
   return (
     <>
    
@@ -21,7 +50,7 @@ function Bookticket() {
             <ul className='showcase'>
                 <li>
                     <div className='seat'></div>
-                    <small>N/A</small>
+                    <small>Available</small>
 
                 </li>
 
@@ -30,16 +59,31 @@ function Bookticket() {
                 <small>Selected</small> 
                 </li>
 
-                <li>
+                {/* <li>
                 <div className='seat occupied'></div>
                 <small>Occupied</small> 
-                </li>
+                </li> */}
                 
             </ul>
         </div>
             <div className='container-seat'>
                 <div className='screen'></div>
-                <div className='row'>
+                  {seat.map((value,i)=>{
+                    return(
+                        <div className='row'>
+                            {value.map((innerseat,j)=>{
+                                return(
+                                    <div 
+                                      onClick={()=>handleSeat(i,j)}
+                                    className={innerseat ? "border rounded bg-danger col" : "col border bg-primary rounded"}
+                                    >{ 10 *parseInt(i ) + parseInt(j+1)}</div>
+                                )
+                            })}
+                        </div>
+                    )
+                  })}
+
+                {/* <div className='row'>
                     
                     
                     <div className='seat'>01</div> 
@@ -127,11 +171,12 @@ function Bookticket() {
                     <div className='seat occupied'>62</div>
                     <div className='seat'>63</div>
                     <div className='seat'>64</div>
-                </div> 
+                </div>  */}
             </div>
              <p className='finishtext'>
-                you have selected<span id='countnum'>0</span> seats for a price of Rs.<span id='totalamount'>0</span>
+                you have selected <span id='countnum'>{ticketCount}</span> seats for a price of Rs.<span id='totalamount'>{price * 2*ticketCount}</span>
             </p> 
+            <button id='conform-tkt' onClick={conf} >Confirm Ticket</button>
       
     </div>
     </>

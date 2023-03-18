@@ -1,6 +1,6 @@
 .container1{
     display: flex;
-    background-color: rgb(174, 101, 243);
+    /* background-color: rgb(174, 101, 243); */
     background: url(./bg2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -38,6 +38,7 @@
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 .reg-sub-btn:hover{
     color: aqua;

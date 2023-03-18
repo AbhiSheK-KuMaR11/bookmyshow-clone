@@ -8,6 +8,7 @@
     /* text-align: center; */
     justify-content: center;
     min-height: 100vh;
+    min-width: 100%;
     align-items: center;
     flex-direction: column;  
 
@@ -36,6 +37,7 @@ h2{
 label{
     text-align: left;
     padding: 0.25rem 0;
+    margin: 10px;
 }
 input{
     margin: 0.5rem 0;
@@ -52,6 +54,7 @@ input{
     cursor: pointer;
     background-color: blue;
     color: pink;
+    margin-top: 15px;
     
 }
 .submit-btn:hover{
