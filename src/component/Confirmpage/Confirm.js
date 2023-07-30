@@ -1,22 +1,24 @@
 import React from 'react'
 import  "./confirm.css";
-import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
+// import { useNavigate } from 'react-router-dom';
 
 function Confirm() {
 
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const homer = () => {
-        navigate("/Home")
-    }
+    // const homer = () => {
+    //     navigate("/Home")
+    // }
 
 
 
 
   return (
     <>
-    <button id='bt-home' onClick={homer}>Home</button>
+    <Header />
+    {/* <button id='bt-home' onClick={homer}>Home</button> */}
     <div className='thank'>
         
       <h2>ThankYou !!!</h2>

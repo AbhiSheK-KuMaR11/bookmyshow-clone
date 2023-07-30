@@ -1,6 +1,8 @@
 import React,{useState, useEffect, useContext} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { contextprovider } from '../Header/Context/Context';
+import Header from '../Header/Header';
+import Loginpage from '../LoginPage/Loginpage';
 
 import "./Home.css"
 
@@ -26,32 +28,35 @@ const Home = () => {
         console.log('id', id);
         navigate(`/movie/${id}`)
     }
+    const loggedin = window.sessionStorage.getItem("loggedin")
+    console.log(loggedin)
 
 
 
   return (
-    
+    loggedin ?
     <>
+    <Header />
     <div className='foradd'>
      <div className='sidebar'>
-      <h1>Genres</h1>
-      <div className='allgeners'>
-      <li>Adventure</li>
-      <li>Animation</li>
-      <li>Comedy</li>
-      <li>Crime</li>
-      <li>Documentry</li> 
-      <li>Drama</li>
-      <li>Family</li>
-      <li>Fantasy</li>
-      <li>History</li>
-      <li>Horor</li>
-      <li> Music</li>
-      <li>Mistory</li>
-      <li>Romance</li>
-      <li>Science</li>
-      <li>Fiction</li>
-      </div>
+      {/* <h1>Genres</h1> */}
+      {/* <div className='allgeners'> */}
+      {/* <li>Adventure</li> */}
+      {/* <li>Animation</li> */}
+      {/* <li>Comedy</li> */}
+      {/* <li>Crime</li> */}
+      {/* <li>Documentry</li>  */}
+      {/* <li>Drama</li> */}
+      {/* <li>Family</li> */}
+      {/* <li>Fantasy</li> */}
+      {/* <li>History</li> */}
+      {/* <li>Horor</li> */}
+      {/* <li> Music</li> */}
+      {/* <li>Mistory</li> */}
+      {/* <li>Romance</li> */}
+      {/* <li>Science</li> */}
+      {/* <li>Fiction</li> */}
+      {/* </div> */}
 
     </div>
     <div className='headnowplaying'>
@@ -64,7 +69,7 @@ const Home = () => {
                 {/* <h3>{np.poster_path}</h3> */}
                 <img src= {` https://image.tmdb.org/t/p/original${np?.poster_path} `}alt ={"img"}  className = "np-img1"/>
                 {/* <h3 className='title'>{np.title}</h3> */}
-                {/* <h3 className='average'>{np.vote_average}</h3> */}
+                <h6 className='average fa-solid fa-star'>{np.vote_average}/10</h6>
             </div>
         )
     })}
@@ -72,6 +77,7 @@ const Home = () => {
     </div>
     </div>
     </>
+    : <Loginpage />
   )
 
 }

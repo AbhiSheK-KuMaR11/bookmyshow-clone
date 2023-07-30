@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Register.css";
 
 function Register() {
@@ -32,7 +32,7 @@ function Register() {
         <label htmlFor='password'>Password</label>
         <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder='Password' className='password' required />
         <button className='reg-sub-btn' type='submit'>Register</button>
-        <button className='reg-btn'><a href='/'>Allready have an Acccount? LogIn here</a></button>
+        <button className='reg-btn'><Link to= "/">Allready have an Acccount? LogIn here</Link></button>
        </form>
        
       

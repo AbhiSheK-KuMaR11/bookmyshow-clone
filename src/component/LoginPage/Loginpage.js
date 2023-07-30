@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import "./Loginpage.css";
 
@@ -17,6 +17,7 @@ function Loginpage() {
         if(person){
             const password = JSON.parse(person).password
             if(JSON.parse(person).password === pass){
+                window.sessionStorage.setItem("loggedin", email)
                 navigate("/Home")
 
             }else{
@@ -24,7 +25,7 @@ function Loginpage() {
 
             }
         }else{
-            setConfirm(prev => "Please entered a valid email")
+            setConfirm(prev => "Please enter a valid email")
         }
     }
 
@@ -39,8 +40,8 @@ function Loginpage() {
         <label htmlFor='password'>Password</label>
         <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder='Password' className='password' required />
         <button className='submit-btn' type='submit'>Log In</button>
-        <h2 style={{color:"red"}}>{confirm ? confirm : null}</h2>
-        <button className='link-btn'><a href='/register'>Don't have an account? Register here</a></button>
+        <h2 style={{color:"red"}}>{ confirm ? confirm : null }</h2>
+        <button className='link-btn'><Link to= "/register">Don't have an account? Register here</Link></button>
 
        </form>
       

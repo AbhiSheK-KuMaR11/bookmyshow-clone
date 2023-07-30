@@ -61,9 +61,9 @@
 
     
 } */
-/* .average{
+.average{
     margin: 10px;  
-} */
+}
 
 /* sidebarcss */
 .sidebar{
@@ -98,3 +98,36 @@ li{
 /* .headnowplaying{
     display: block;
 } */
+
+
+
+@media screen and (max-width: 680px){
+    
+   .foradd{
+    display: block;
+   }
+   .allgeners{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .nowpage{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+   }
+}
+@media screen and (max-width: 980px){
+    .foradd{
+        display: block;
+       }
+       .allgeners{
+        display: flex;
+        flex-wrap: wrap;
+       }
+       .nowpage{
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100%;
+       }
+
+}

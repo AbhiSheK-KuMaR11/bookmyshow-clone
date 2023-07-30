@@ -44,11 +44,11 @@
     margin-right: 70px;
     font-size: 30px;
 }
-.fa-user{
+/* .fa-user{
     margin-right: 70px;
     font-size: 30px;
     
-}
+} */
 .rightpart{
     display: flex;
     justify-content: space-between;
@@ -56,6 +56,56 @@
     padding: 10px;
     /* background-color: red; */
 } 
-/* .input1{
-   
-} */
+@media screen and (max-width: 680px) {
+    /* .navbar{
+        background-color: yellow;
+    } */
+    .fa-heart{
+        margin-right: 50px;
+        font-size: 30px;
+        margin-bottom: 28px;
+        margin-left: 10px;
+    }
+    .nameuser{
+        margin-right: 50px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        
+    }
+    #input-hed{
+        font: 20px;
+        padding: 10px;
+        margin-right: 5px;
+        color: white;
+        box-shadow: 2px 2px 2px 2px;
+        background-color: rgb(247, 166, 166);
+        width: auto;
+        /* border: none; */
+    
+    } 
+}
+@media screen and (max-width: 980px){
+    .fa-heart{
+        margin-right: 50px;
+        font-size: 30px;
+        margin-bottom: 17px;
+    }
+    .nameuser{
+        margin-right: 50px;
+        font-size: 20px;
+        margin-bottom: 17px;
+        
+    }
+    #input-hed{
+        font: 20px;
+        padding: 10px;
+        margin-right: 5px;
+        color: white;
+        box-shadow: 2px 2px 2px 2px;
+        background-color: rgb(247, 166, 166);
+        width: auto;
+        /* border: none; */
+    
+    }
+
+}

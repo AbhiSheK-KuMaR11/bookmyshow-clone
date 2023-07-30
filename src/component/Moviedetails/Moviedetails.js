@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import "./Moviedetails.css";
+import Header from '../Header/Header';
 
 function Moviedetails() {
 
@@ -24,6 +25,8 @@ function Moviedetails() {
     console.log(id)
     console.log(sortmovie)
   return (
+    <>
+    <Header />
     <div>
       {
         <div className='disdetails'>
@@ -47,6 +50,7 @@ function Moviedetails() {
         </div>
       }
     </div>
+    </>
   )
 }
 
